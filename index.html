@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="min-h-screen">
+        <!-- small Header -->
+        <div class="w-full bg-black py-2">
+          <div
+            class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-24 flex justify-between items-center gap-4"
+          >
+            <h1
+              class="font-satoshi font-light text-white text-center text-xs sm:text-sm lg:text-base flex-grow"
+            >
+              Sign up and get 20% off to your first order.
+              <span class="underline font-medium cursor-pointer"
+                >Sign Up Now</span
+              >
+            </h1>
+            <div class="flex-shrink-0">
+              <button aria-label="Close announcement">
+                <img
+                  src="./src/assets/icons/cross.png"
+                  alt="close"
+                  class="w-4 h-4 sm:w-5 sm:h-5"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- main Header -->
+        <header class="w-full bg-white">
+          <div class="max-w-[1240px] mx-auto px-4 border-b border-gray-200">
+            <div class="hidden lg:flex items-center gap-[40px] py-6">
+              <!-- Logo -->
+              <a
+                href="#"
+                class="font-integral font-bold text-[22px] text-black shrink-0"
+              >
+                SHOP.CO
+              </a>
+
+              <!-- Nav Links -->
+              <nav class="shrink-0">
+                <ul class="flex items-center gap-6">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-[16px] flex items-center hover:text-gray-600"
+                    >
+                      Shop
+                      <!-- Chevron Down Icon -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="ml-1"
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-[16px] hover:text-gray-600"
+                      >On Sale</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-[16px] hover:text-gray-600"
+                      >New Arrivals</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-[16px] hover:text-gray-600"
+                      >Brands</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+
+              <!-- Search Bar -->
+              <div class="flex-grow max-w-[577px]">
+                <div class="relative">
+                  <input
+                    type="text"
+                    placeholder="Search for products…"
+                    class="w-full h-[48px] bg-[#F0F0F0] rounded-full pl-12 pr-4 text-[16px] placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+                  />
+                  <!-- Search Icon -->
+                  <div
+                    class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.3-4.3" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cart & User Icons -->
+              <div class="flex items-center gap-3 shrink-0">
+                <button
+                  aria-label="Open Cart"
+                  class="p-2 hover:bg-gray-100 rounded-full"
+                >
+                  <!-- Cart Icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="8" cy="21" r="1" />
+                    <circle cx="19" cy="21" r="1" />
+                    <path
+                      d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.16"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="User Account"
+                  class="p-2 hover:bg-gray-100 rounded-full"
+                >
+                  <!-- User Icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- ====================================================================== -->
+            <!-- MOBILE LAYOUT (Visible on screens smaller than 1024px)                 -->
+            <!-- `lg:hidden` hides this on large screens                                -->
+            <!-- ====================================================================== -->
+            <div class="lg:hidden">
+              <!-- Top row: Hamburger, Logo, Icons -->
+              <div class="flex items-center justify-between py-4">
+                <div class="flex items-center gap-3">
+                  <!-- Hamburger Button -->
+                  <button
+                    id="menu-toggle-btn"
+                    class="flex flex-col gap-1 p-2"
+                    aria-label="Toggle Menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                  >
+                    <span class="w-5 h-0.5 bg-black"></span>
+                    <span class="w-5 h-0.5 bg-black"></span>
+                    <span class="w-5 h-0.5 bg-black"></span>
+                  </button>
+                  <!-- Logo -->
+                  <a
+                    href="#"
+                    class="font-integral font-bold text-[20px] text-black"
+                  >
+                    SHOP.CO
+                  </a>
+                </div>
+
+                <!-- Icons -->
+                <div class="flex items-center gap-2">
+                  <button aria-label="Search" class="p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.3-4.3" />
+                    </svg>
+                  </button>
+                  <button aria-label="Open Cart" class="p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="8" cy="21" r="1" />
+                      <circle cx="19" cy="21" r="1" />
+                      <path
+                        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.16"
+                      />
+                    </svg>
+                  </button>
+                  <button aria-label="User Account" class="p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Collapsible Nav Menu -->
+              <nav
+                id="mobile-menu"
+                class="border-t border-gray-200 py-4 hidden"
+              >
+                <ul class="flex flex-col gap-4 items-center">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-[14px] flex items-center justify-center hover:text-gray-600"
+                    >
+                      Shop
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="ml-1"
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-[14px] hover:text-gray-600"
+                      >On Sale</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-[14px] hover:text-gray-600"
+                      >New Arrivals</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-[14px] hover:text-gray-600"
+                      >Brands</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        <!-- Hero Section -->
+        <!-- <div class="w-full bg-white">
+          <div class="max-w-[1240px] mx-auto">
+            <div>
+              <p class="text-[16px] font-family-satoshi font-extralight py-4">
+                Home > <t />Casual
+              </p>
+            </div>
+            <div class="flex">
+              <div
+                class="w-[295px] h-[1220px] border-1 border-gray-200 bg-white rounded-2xl p-6 flex-col"
+              >
+                <div class="flex justify-between border-b border-gray-200 pb-4">
+                  <p class="font-satoshi font-semibold text-[20px]">Filters</p>
+                  <img
+                    src="./src/assets/icons/filter.png"
+                    alt=""
+                    class="size-[24px]"
+                  />
+                </div>
+                <div class="flex flex-col py-4 gap-y-2 border-b border-gray-200">
+                  <div class="flex justify-between">
+                    <p class="font-satoshi font-extralight text-[16px]">
+                      T-shirts
+                    </p>
+                    <img src="./src/assets/icons/mainGreater.png" alt="" srcset="" class="size-[16px]">
+                  </div>
+                  <div class="flex justify-between">
+                    <p class="font-satoshi font-extralight text-[16px]">
+                      Shorts
+                    </p>
+                    <img src="./src/assets/icons/mainGreater.png" alt="" srcset="" class="size-[16px]">
+                  </div>
+                  <div class="flex justify-between">
+                    <p class="font-satoshi font-extralight text-[16px]">
+                      Shirts
+                    </p>
+                    <img src="./src/assets/icons/mainGreater.png" alt="" srcset="" class="size-[16px]">
+                  </div>
+                  <div class="flex justify-between">
+                    <p class="font-satoshi font-extralight text-[16px]">
+                      Hoodie
+                    </p>
+                    <img src="./src/assets/icons/mainGreater.png" alt="" srcset="" class="size-[16px]">
+                  </div>
+                  <div class="flex justify-between">
+                    <p class="font-satoshi font-extralight text-[16px]">
+                      Jeans
+                    </p>
+                    <img src="./src/assets/icons/mainGreater.png" alt="" srcset="" class="size-[16px]">
+                  </div>
+                </div>
+                <div class="py-4 border-b border-gray-200">
+                  <div class="flex justify-between">
+                    <p class="font-family-satoshi font-bold+">Price</p>
+                    <img src="./src/assets/icons/price.png" alt="" srcset="" class="size-[16px]">
+                  </div>
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div> -->
+        <main class="max-w-[1240px] mx-auto py-8">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Filters Sidebar -->
+            <aside class="w-full lg:w-[295px] shrink-0 border-1 border-gray-200 rounded-2xl font-family-satoshi">
+              <div class="bg-white rounded-2xl p-6 flex flex-col gap-y-5">
+                <!-- Filters Header -->
+                <div
+                  class="flex justify-between items-center border-b border-gray-200 pb-4"
+                >
+                  <p class="font-bold text-[20px]">Filters</p>
+                  <button aria-label="Filter options">
+                   <img src="./src/assets/icons/filter.png" alt="">
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Categories Filter -->
+                <div
+                  class="flex flex-col gap-y-4 pb-4 border-b border-gray-200"
+                >
+                  <div class="flex justify-between items-center cursor-pointer">
+                    <p class="font-light text-[16px] text-gray-600">T-shirts</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-gray-400"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                  <div class="flex justify-between items-center cursor-pointer">
+                    <p class="font-light text-[16px] text-gray-600">Shorts</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-gray-400"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                  <div class="flex justify-between items-center cursor-pointer">
+                    <p class="font-light text-[16px] text-gray-600">Shirts</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-gray-400"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                  <div class="flex justify-between items-center cursor-pointer">
+                    <p class="font-light text-[16px] text-gray-600">Hoodie</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-gray-400"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                  <div class="flex justify-between items-center cursor-pointer">
+                    <p class="font-light text-[16px] text-gray-600">Jeans</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-gray-400"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="py-4 border-b border-gray-200">
+                  <div
+                    class="flex justify-between items-center cursor-pointer mb-4"
+                  >
+                    <p class="font-bold text-[16px]">Price</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <input
+                      type="range"
+                      min="0"
+                      max="200"
+                      value="150"
+                      class="w-full"
+                    />
+                    <div
+                      class="flex justify-between text-sm text-gray-500 mt-2"
+                    >
+                      <span>$0</span>
+                      <span>$200</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Colors Filter -->
+                <div class="py-4 border-b border-gray-200">
+                  <div
+                    class="flex justify-between items-center cursor-pointer mb-4"
+                  >
+                    <p class="font-bold text-[16px]">Colors</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </div>
+                  <div class="grid grid-cols-5 grid-rows-2 gap-4">
+                    <button class="w-8 h-8 rounded-full bg-green-500"></button>
+                    <button class="w-8 h-8 rounded-full bg-red-500"></button>
+                    <button class="w-8 h-8 rounded-full bg-yellow-400"></button>
+                    <button class="w-8 h-8 rounded-full bg-orange-500"></button>
+                    <button class="w-8 h-8 rounded-full bg-cyan-400"></button>
+                    <button
+                      class="w-8 h-8 rounded-full bg-blue-600 ring-2 ring-offset-2 ring-blue-600 flex items-center justify-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </button>
+                    <button class="w-8 h-8 rounded-full bg-violet-500"></button>
+                    <button class="w-8 h-8 rounded-full bg-pink-500"></button>
+                    <button
+                      class="w-8 h-8 rounded-full bg-white border"
+                    ></button>
+                    <button class="w-8 h-8 rounded-full bg-black"></button>
+                  </div>
+                </div>
+
+                <!-- Size Filter -->
+                <div class="py-4 border-b border-gray-200">
+                  <div
+                    class="flex justify-between items-center cursor-pointer mb-4"
+                  >
+                    <p class="font-bold text-[16px]">Size</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </div>
+                  <div class="flex flex-wrap gap-3">
+                    <button
+                      class="px-4 py-2 rounded-full bg-gray-100 text-gray-600 text-sm hover:bg-black hover:text-white"
+                    >
+                      XX-Small
+                    </button>
+                    <button
+                      class="px-4 py-2 rounded-full bg-gray-100 text-gray-600 text-sm hover:bg-black hover:text-white"
+                    >
+                      X-Small
+                    </button>
+                    <button
+                      class="px-4 py-2 rounded-full bg-black text-white text-sm"
+                    >
+                      Small
+                    </button>
+                    <button
+                      class="px-4 py-2 rounded-full bg-gray-100 text-gray-600 text-sm hover:bg-black hover:text-white"
+                    >
+                      Medium
+                    </button>
+                    <button
+                      class="px-4 py-2 rounded-full bg-gray-100 text-gray-600 text-sm hover:bg-black hover:text-white"
+                    >
+                      Large
+                    </button>
+                    <button
+                      class="px-4 py-2 rounded-full bg-gray-100 text-gray-600 text-sm hover:bg-black hover:text-white"
+                    >
+                      X-Large
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Dress Style -->
+                <div class="flex flex-col gap-y-4 ">
+                   <div class="flex justify-between items-center cursor-pointer mb-2">
+                    <p class="font-bold text-[20px] text-black">Dress Style</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-gray-400"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                   <div class="flex justify-between items-center cursor-pointer">
+                    <p class="font-light text-[16px] text-gray-600">Casual</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-gray-400"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                   <div class="flex justify-between items-center cursor-pointer">
+                    <p class="font-light text-[16px] text-gray-600">Formal</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-gray-400"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                   <div class="flex justify-between items-center cursor-pointer">
+                    <p class="font-light text-[16px] text-gray-600">Party</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-gray-400"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                   <div class="flex justify-between items-center cursor-pointer">
+                    <p class="font-light text-[16px] text-gray-600">Gym</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-gray-400"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                </div>
+                <!-- Apply Filter Button -->
+                <div class="pt-4">
+                  <button
+                    class="w-full bg-black text-white py-3 rounded-full font-light hover:bg-gray-800"
+                  >
+                    Apply Filter
+                  </button>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Main Content Area (e.g., Product Grid) -->
+            <section class="flex-1">
+              <div class="bg-white rounded-2xl p-6 h-full">
+                <h2 class="text-2xl font-bold">Products</h2>
+                <p class="text-gray-500 mt-2">
+                  Product listings would go here.
+                </p>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+      <a href="./src/html/admin.html">admin</a>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

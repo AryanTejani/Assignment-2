@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Integral CF';
+  src: url('./assets/fonts/CU/Fontspring-DEMO-integralcf-medium.otf') format('opentype');
+  font-weight: 500; /* Medium */
+}
+
+@font-face {
+  font-family: 'Integral CF';
+  src: url('./assets/fonts/CU/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+  font-weight: 700; /* Bold */
+}
+
+/* Define the 'Satoshi' font family with its different weights */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/satoshi/Satoshi-Light.otf') format('opentype');
+  font-weight: 300; /* Light */
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/satoshi/Satoshi-Medium.otf') format('opentype');
+  font-weight: 500; /* Medium */
+}
+
+@theme {
+  --font-family-integral: 'Integral CF', sans-serif;
+  --font-family-satoshi: 'Satoshi', sans-serif;
+}
