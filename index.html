@@ -92,12 +92,12 @@
 
               <!-- Search Bar -->
               <div class="flex-grow max-w-[577px]">
-                <div class="relative">
-                  <input
-                    type="text"
-                    placeholder="Search for products…"
-                    class="w-full h-[48px] bg-[#F0F0F0] rounded-full pl-12 pr-4 text-[16px] placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
-                  />
+    <div class="relative">
+        <input
+            id="search-input" type="text"
+            placeholder="Search for products…"
+            class="w-full h-[48px] bg-[#F0F0F0] rounded-full pl-12 pr-4 text-[16px] placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+        />
                   <!-- Search Icon -->
                   <div
                     class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"
@@ -715,14 +715,9 @@
             </aside>
 
             <!-- Main Content Area (e.g., Product Grid) -->
-            <section class="flex-1">
-              <div class="bg-white rounded-2xl p-6 h-full">
-                <h2 class="text-2xl font-bold">Products</h2>
-                <p class="text-gray-500 mt-2">
-                  Product listings would go here.
-                </p>
-              </div>
-            </section>
+            <section id="product-listing" class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-3 gap-6 cursor-pointer">
+    <p class="col-span-full text-center text-gray-500">Loading products...</p>
+</section>
           </div>
         </main>
       </div>

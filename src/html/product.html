@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main class="container mx-auto px-4 py-8">
+    <div id="product-detail-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="shadow-lg rounded-lg overflow-hidden">
+            <img src="placeholder-image.jpg" alt="Product Image" class="w-full h-auto">
+            <div class="grid grid-cols-3 gap-2 mt-2">
+                <img src="placeholder-image.jpg" alt="Thumbnail 1" class="w-full h-auto cursor-pointer border border-gray-300 hover:border-blue-500">
+                <img src="placeholder-image.jpg" alt="Thumbnail 2" class="w-full h-auto cursor-pointer border border-gray-300 hover:border-blue-500">
+                <img src="placeholder-image.jpg" alt="Thumbnail 3" class="w-full h-auto cursor-pointer border border-gray-300 hover:border-blue-500">
+            </div>
+        </div>
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">ONE LIFE GRAPHIC T-SHIRT</h1>
+            <div class="flex items-center mt-2">
+                <span class="text-yellow-500">
+                    <svg class="w-5 h-5 inline-block fill-current" viewBox="0 0 20 20"><path d="M10 1L12.24 7.76L19 7.76L13.76 11.69L16.07 18.31L10 14.55L3.93 18.31L6.24 11.69L1 7.76L7.76 7.76L10 1Z"/></svg>
+                    <svg class="w-5 h-5 inline-block fill-current" viewBox="0 0 20 20"><path d="M10 1L12.24 7.76L19 7.76L13.76 11.69L16.07 18.31L10 14.55L3.93 18.31L6.24 11.69L1 7.76L7.76 7.76L10 1Z"/></svg>
+                    <svg class="w-5 h-5 inline-block fill-current" viewBox="0 0 20 20"><path d="M10 1L12.24 7.76L19 7.76L13.76 11.69L16.07 18.31L10 14.55L3.93 18.31L6.24 11.69L1 7.76L7.76 7.76L10 1Z"/></svg>
+                    <svg class="w-5 h-5 inline-block fill-current" viewBox="0 0 20 20"><path d="M10 1L12.24 7.76L19 7.76L13.76 11.69L16.07 18.31L10 14.55L3.93 18.31L6.24 11.69L1 7.76L7.76 7.76L10 1Z"/></svg>
+                    <svg class="w-5 h-5 inline-block fill-current" viewBox="0 0 20 20"><path d="M10 1L12.24 7.76L19 7.76L13.76 11.69L16.07 18.31L10 14.55L3.93 18.31L6.24 11.69L1 7.76L7.76 7.76L10 1Z"/></svg>
+                </span>
+                <span class="text-gray-600 ml-2">4.5/5</span>
+            </div>
+            <div class="mt-4 flex items-center">
+                <span class="text-2xl font-bold text-gray-900">$260</span>
+                <span class="text-gray-500 line-through ml-2">$300</span>
+                <span class="bg-red-100 text-red-500 text-sm font-semibold px-2 py-1 rounded-full ml-2">-40%</span>
+            </div>
+            <p class="text-gray-700 mt-4">This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.</p>
+
+            <div class="mt-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Select Colors</h3>
+                <div class="flex items-center space-x-3">
+                    <button class="w-8 h-8 rounded-full bg-[#556B2F] cursor-pointer focus:outline-none border-2 border-[#556B2F]"></button>
+                    <button class="w-8 h-8 rounded-full bg-[#36454F] cursor-pointer focus:outline-none border-2 border-gray-300"></button>
+                    <button class="w-8 h-8 rounded-full bg-[#4682B4] cursor-pointer focus:outline-none border-2 border-gray-300"></button>
+                    <button class="w-8 h-8 rounded-full bg-[#000000] cursor-pointer focus:outline-none border-2 border-gray-300"></button>
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Choose Size</h3>
+                <div class="flex items-center space-x-3">
+                    <button class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 text-sm focus:outline-none hover:bg-gray-300">Small</button>
+                    <button class="px-4 py-2 rounded-full bg-white text-gray-700 text-sm focus:outline-none shadow-md">Medium</button>
+                    <button class="px-4 py-2 rounded-full bg-black text-white text-sm focus:outline-none">Large</button>
+                    <button class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 text-sm focus:outline-none hover:bg-gray-300">X-Large</button>
+                </div>
+            </div>
+
+            <div class="mt-8 flex items-center space-x-4">
+                <div class="flex items-center border border-gray-300 rounded-md">
+                    <button class="px-3 py-2 focus:outline-none">-</button>
+                    <input type="number" value="1" min="1" class="w-16 text-center focus:outline-none">
+                    <button class="px-3 py-2 focus:outline-none">+</button>
+                </div>
+                <button class="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 focus:outline-none">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-gray-800 text-white py-6 mt-8">
+    <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2023 Your E-commerce Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<script type="module" src="../js/product-page.js"></script>
+</body>
+</html>
